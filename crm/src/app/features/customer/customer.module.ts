@@ -8,6 +8,7 @@ import { CustomerNewComponent } from './pages/customer-new/customer-new.componen
 import { CustomerEditComponent } from './pages/customer-edit/customer-edit.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerTableComponent } from './components/customer-table/customer-table.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     CustomerIndexComponent,
     CustomerListComponent,
     CustomerNewComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    CustomerTableComponent
   ],
   imports: [
     CommonModule,
