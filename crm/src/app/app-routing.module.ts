@@ -4,11 +4,15 @@ import { StartPageComponent } from './features/start/start-page/start-page.compo
 import { DefaultPageComponent } from './default-page.component';
 
 const routes: Routes = [
- {
-  path: '**', // Wildcard
-  component: DefaultPageComponent,
- }
-
+  {
+    path: '',
+    redirectTo: '/start',
+    pathMatch: 'full'
+  },
+  {
+    path: '**', // Wildcard
+    component: DefaultPageComponent,
+  }
 ];
 
 @NgModule({

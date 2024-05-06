@@ -7,6 +7,7 @@ import { LegalModule } from './features/legal/legal.module';
 import { StartModule } from './features/start/start.module';
 import { DefaultPageComponent } from './default-page.component';
 import { CoreModule } from './core/core.module';
+import { CustomerModule } from './features/customer/customer.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CoreModule } from './core/core.module';
     // Feature Module
     StartModule,
     LegalModule,
+    CustomerModule,
 
     AppRoutingModule
   ],
