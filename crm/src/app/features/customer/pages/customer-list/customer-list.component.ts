@@ -8,6 +8,8 @@ import { Customer } from '../../model/customer';
 })
 export class CustomerListComponent implements OnInit {
 
+  public customers: Customer[] = [];
+
   constructor(private customerService: CustomerService) {}
 
   ngOnInit(): void {
@@ -17,9 +19,14 @@ export class CustomerListComponent implements OnInit {
   loadCustomers() {
     this.customerService
       .getAll()
-      .subscribe((customers: Customer[]) => {
-      console.log(customers);
-    });
+      .subscribe({
+        next: (customers: Customer[]) => {
+          this.customers = customers;
+        },
+        error: (e) => {
+          console.log(e);
+        }
+      });
   }
 
 }
