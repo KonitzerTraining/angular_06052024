@@ -25,6 +25,7 @@ import { CustomerModule } from './features/customer/customer.module';
     LegalModule,
     CustomerModule,
 
+    // immer zuletzt wegen der **
     AppRoutingModule
   ],
   providers: [],
