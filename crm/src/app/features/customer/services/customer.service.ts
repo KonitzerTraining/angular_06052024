@@ -14,6 +14,11 @@ export class CustomerService {
   // HttpClient wird instantiiert, weil er als Typ erwähnt wird.
   constructor(private http: HttpClient) { }
 
+  /**
+   * Gets all Customers from Rest-API (look into environments.ts)
+   * 
+   * @returns  Observable<Customer[]>
+   */
   getAll(): Observable<Customer[]> {
     return this.http
       .get<Customer[]>(url)
@@ -31,4 +36,16 @@ export class CustomerService {
     return this.http.delete(url + id);
   }
   
+  post(customer: Omit<Customer, 'id'>): Observable<Customer> {
+    return this.http.post<Customer>(url, customer);
+  }
+
+  getById(id: number | string) {
+    return this.http.get(url + id);
+  }
+
+  put(customer: Customer): Observable<Customer> {
+    return this.http.put<Customer>(url + customer.id, customer);
+  }
+
 }
