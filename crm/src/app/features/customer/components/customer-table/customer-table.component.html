@@ -14,7 +14,7 @@
             <td>{{ customer.name }}</td>
             <td class="text-end">{{customer.credit| currency:'EUR'}}</td>
             <td class="text-end">
-                <button class="btn btn-sm btn-danger me-1">Delete</button>
+                <button class="btn btn-sm btn-danger me-1" (click)="deleteCustomer(customer.id)">Delete</button>
                 <button class="btn btn-sm btn-info me-1" [routerLink]="['edit', customer.id]">Edit</button>
 
             </td>

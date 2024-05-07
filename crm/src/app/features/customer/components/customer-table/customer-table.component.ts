@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Customer } from '../../model/customer';
 
 @Component({
@@ -9,5 +9,12 @@ export class CustomerTableComponent {
 
   @Input()
   tableData: Customer[] = [];
+
+  @Output()
+  deleteEvent = new EventEmitter<number>();
+
+  deleteCustomer(id: number) {
+    this.deleteEvent.emit(id);
+  }
 
 }

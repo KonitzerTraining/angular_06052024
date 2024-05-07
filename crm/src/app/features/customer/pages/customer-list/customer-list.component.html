@@ -15,5 +15,5 @@
 }
 
 @if (!loading && errorMessage === null) {
-    <app-customer-table [tableData]="customers"></app-customer-table>
+    <app-customer-table [tableData]="customers" (deleteEvent)="deleteCustomer($event)"></app-customer-table>
 }
