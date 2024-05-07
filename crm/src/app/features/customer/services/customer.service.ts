@@ -26,5 +26,9 @@ export class CustomerService {
         retry(3),
       )
   }
+
+  deleteById(id: number) {
+    return this.http.delete(url + id);
+  }
   
 }

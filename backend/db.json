@@ -8,17 +8,12 @@
     {
       "id": 2,
       "name": "Lee",
-      "credit":234
-    },
-    {
-      "id": 3,
-      "name": "Matt",
-      "credit":436
+      "credit": 234
     },
     {
       "id": 4,
       "name": "Stan",
-      "credit":345
+      "credit": 345
     }
   ]
 }

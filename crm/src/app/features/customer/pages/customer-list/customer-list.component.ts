@@ -19,10 +19,23 @@ export class CustomerListComponent implements OnInit {
   }
 
   deleteCustomer(id: number) {
-    console.log('Delete ID:', id);
+    this.errorMessage = null;
+    this.loading = true;
+
+    this.customerService
+      .deleteById(id)
+      .subscribe({ // observer
+        next: () => {
+          this.loadCustomers();
+        },
+        error: (e: Error) => {
+          this.errorMessage = e.message;
+          this.loading = false;
+        }
+      });
   }
 
-  loadCustomers() {
+  loadCustomers() { 
     this.errorMessage = null;
     this.loading = true;
 
