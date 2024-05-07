@@ -134,7 +134,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#deleteById" >deleteById</a>
+                            </li>
+                            <li>
                                 <a href="#getAll" >getAll</a>
+                            </li>
+                            <li>
+                                <a href="#getById" >getById</a>
+                            </li>
+                            <li>
+                                <a href="#post" >post</a>
+                            </li>
+                            <li>
+                                <a href="#put" >put</a>
                             </li>
                         </ul>
                     </td>
@@ -206,6 +218,73 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="deleteById"></a>
+                    <span class="name">
+                        <span ><b>deleteById</b></span>
+                        <a href="#deleteById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/app/features/customer/services/customer.service.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getAll"></a>
                     <span class="name">
                         <span ><b>getAll</b></span>
@@ -222,8 +301,51 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="17"
-                                    class="link-to-prism">src/app/features/customer/services/customer.service.ts:17</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="22"
+                                    class="link-to-prism">src/app/features/customer/services/customer.service.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Gets all Customers from Rest-API (look into environments.ts)</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Customer.html" target="_self" >Observable&lt;Customer[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>Observable&lt;Customer[]&gt;</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getById"></a>
+                    <span class="name">
+                        <span ><b>getById</b></span>
+                        <a href="#getById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getById(id: number | string)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/app/features/customer/services/customer.service.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -231,10 +353,174 @@
             <tr>
                 <td class="col-md-4">
 
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                        <code>number | string</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="../interfaces/Customer.html" target="_self" >Observable&lt;Customer[]&gt;</a></code>
+                            <b>Returns : </b>        <code><a href="../interfaces/Customer.html" target="_self" >Observable&lt;Customer&gt;</a></code>
 
                         </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="post"></a>
+                    <span class="name">
+                        <span ><b>post</b></span>
+                        <a href="#post"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>post(customer: <a href="../interfaces/Customer.html" target="_self">Omit&lt;Customer | id&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/app/features/customer/services/customer.service.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>customer</td>
+                                            <td>
+                                                            <code><a href="../interfaces/Customer.html" target="_self" >Omit&lt;Customer | id&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Customer.html" target="_self" >Observable&lt;Customer&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="put"></a>
+                    <span class="name">
+                        <span ><b>put</b></span>
+                        <a href="#put"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>put(customer: <a href="../interfaces/Customer.html" target="_self">Customer</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="47"
+                                    class="link-to-prism">src/app/features/customer/services/customer.service.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>customer</td>
+                                            <td>
+                                                            <code><a href="../interfaces/Customer.html" target="_self" >Customer</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Customer.html" target="_self" >Observable&lt;Customer&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -249,7 +535,7 @@
 import { environment } from &#x27;../../../../environments/environment&#x27;;
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
 import { Customer } from &#x27;../model/customer&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
+import { Observable, debounce, debounceTime, retry, tap } from &#x27;rxjs&#x27;;
 
 const url &#x3D; environment.api + &#x27;customers/&#x27;;
 
@@ -261,10 +547,40 @@ export class CustomerService {
   // HttpClient wird instantiiert, weil er als Typ erwähnt wird.
   constructor(private http: HttpClient) { }
 
+  /**
+   * Gets all Customers from Rest-API (look into environments.ts)
+   * 
+   * @returns  Observable&lt;Customer[]&gt;
+   */
   getAll(): Observable&lt;Customer[]&gt; {
-    return this.http.get&lt;Customer[]&gt;(url);
+    return this.http
+      .get&lt;Customer[]&gt;(url)
+      .pipe(
+        
+        tap((data) &#x3D;&gt; {
+          console.log(data);
+        }), // Operator von rxjs
+    
+        retry(3),
+      )
+  }
+
+  deleteById(id: number) {
+    return this.http.delete(url + id);
   }
   
+  post(customer: Omit&lt;Customer, &#x27;id&#x27;&gt;): Observable&lt;Customer&gt; {
+    return this.http.post&lt;Customer&gt;(url, customer);
+  }
+
+  getById(id: number | string): Observable&lt;Customer&gt; {
+    return this.http.get&lt;Customer&gt;(url + id);
+  }
+
+  put(customer: Customer): Observable&lt;Customer&gt; {
+    return this.http.put&lt;Customer&gt;(url + customer.id, customer);
+  }
+
 }
 </code></pre>
     </div>

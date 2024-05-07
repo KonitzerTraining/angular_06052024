@@ -131,6 +131,8 @@
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { CustomerIndexComponent } from &#x27;./customer-index.component&#x27;;
 import { CustomerListComponent } from &#x27;./pages/customer-list/customer-list.component&#x27;;
+import { CustomerNewComponent } from &#x27;./pages/customer-new/customer-new.component&#x27;;
+import { CustomerEditComponent } from &#x27;./pages/customer-edit/customer-edit.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
@@ -140,6 +142,14 @@ const routes: Routes &#x3D; [
       {
         path: &#x27;&#x27;,
         component: CustomerListComponent
+      },
+      {
+        path: &#x27;new&#x27;,
+        component: CustomerNewComponent
+      },
+      {
+        path: &#x27;edit/:id&#x27;,
+        component: CustomerEditComponent
       }
     ]
   }

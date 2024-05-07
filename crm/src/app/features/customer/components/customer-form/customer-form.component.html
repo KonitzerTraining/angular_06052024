@@ -14,6 +14,8 @@
         }" name="credit" id="credit" formControlName="credit">
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary" [disabled]="customerForm.invalid">Create</button>
+        <button class="btn btn-primary" [disabled]="customerForm.invalid">
+            <ng-content></ng-content>
+        </button>
     </div>
 </form>

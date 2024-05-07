@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Customer } from '../model/customer';
-import { Observable, debounce, debounceTime, retry, tap } from 'rxjs';
+import { Observable, retry, tap } from 'rxjs';
 
 const url = environment.api + 'customers/';
 

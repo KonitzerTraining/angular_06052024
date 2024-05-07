@@ -11,5 +11,7 @@
 }
 
 @if (!loading && errorMessage === null) {
-<app-customer-form (customerSubmit)="createCustomer($event)"></app-customer-form>
+<app-customer-form (customerSubmit)="createCustomer($event)">
+    Create New Customer
+</app-customer-form>
 } 

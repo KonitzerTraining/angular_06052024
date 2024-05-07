@@ -1,2 +1,16 @@
 <h2>Edit Customer with ID {{ id }}</h2>
-<app-customer-form></app-customer-form>
+@if(errorMessage !== null) {
+<div class="alert alert-danger">
+    {{errorMessage}}
+</div>
+}
+
+@if (loading) {
+<app-loading-indicator></app-loading-indicator>
+}
+
+@if (!loading && errorMessage === null) {
+<app-customer-form [formData]="customer" (customerSubmit)="updateCustomer($event)">
+    Update Customer
+</app-customer-form>
+}
