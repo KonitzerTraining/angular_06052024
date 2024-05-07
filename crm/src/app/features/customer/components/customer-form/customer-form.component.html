@@ -1,1 +1,13 @@
-<p>customer-form works!</p>
+<form (ngSubmit)="formSubmitHandler()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" id="name">
+    </div>
+    <div class="mb-3">
+        <label for="credit" class="form-label">Credit</label>
+        <input type="number" class="form-control" name="credit" id="credit">
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary">Create</button>
+    </div>
+</form>

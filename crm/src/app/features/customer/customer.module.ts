@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomerTableComponent } from './components/customer-table/customer-table.component';
 import { CoreModule } from '../../core/core.module';
 import { CustomerFormComponent } from './components/customer-form/customer-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { CustomerFormComponent } from './components/customer-form/customer-form.
   imports: [
     CommonModule,
     HttpClientModule,
+    ReactiveFormsModule,
     CoreModule,
     CustomerRoutingModule
   ]

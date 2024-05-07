@@ -8,4 +8,8 @@ export class CustomerFormComponent {
 
   @Output()
   formSubmit = new EventEmitter();
+
+  formSubmitHandler() {
+    console.log('submit');
+  }
 }
