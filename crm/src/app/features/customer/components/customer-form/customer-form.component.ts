@@ -25,12 +25,12 @@ export class CustomerFormComponent {
   });
 
   @Output()
-  formSubmit = new EventEmitter();
-
+  customerSubmit = new EventEmitter();
 
   constructor(private fb: FormBuilder) {}
 
   formSubmitHandler() {
-    console.log(this.customerForm.value);
+    const customer = this.customerForm.value;
+    this.customerSubmit.emit(customer)
   }
 }

@@ -10,4 +10,6 @@
 <app-loading-indicator></app-loading-indicator>
 }
 
-<app-customer-form (formSubmit)="createCustomer($event)"></app-customer-form>
+@if (!loading && errorMessage === null) {
+<app-customer-form (customerSubmit)="createCustomer($event)"></app-customer-form>
+}
