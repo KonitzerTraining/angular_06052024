@@ -1,13 +1,19 @@
-<form (ngSubmit)="formSubmitHandler()">
+<form (ngSubmit)="formSubmitHandler()" [formGroup]="customerForm">
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" name="name" id="name">
+        <input type="text" class="form-control" [ngClass]="{
+            'is-invalid': customerForm.controls['name'].invalid && customerForm.controls['name'].touched,
+            'is-valid': customerForm.controls['name'].valid && customerForm.controls['name'].touched
+        }" name="name" id="name" formControlName="name">
     </div>
     <div class="mb-3">
         <label for="credit" class="form-label">Credit</label>
-        <input type="number" class="form-control" name="credit" id="credit">
+        <input type="number" min="0" class="form-control" [ngClass]="{
+            'is-invalid': customerForm.controls['credit'].invalid && customerForm.controls['credit'].touched,
+            'is-valid': customerForm.controls['credit'].valid && customerForm.controls['credit'].touched
+        }" name="credit" id="credit" formControlName="credit">
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary">Create</button>
+        <button class="btn btn-primary" [disabled]="customerForm.invalid">Create</button>
     </div>
 </form>
