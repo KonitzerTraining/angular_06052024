@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Customer } from '../model/customer';
-import { Observable } from 'rxjs';
+import { Observable, debounce, debounceTime, retry, tap } from 'rxjs';
 
 const url = environment.api + 'customers/';
 
@@ -15,7 +15,16 @@ export class CustomerService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(url);
+    return this.http
+      .get<Customer[]>(url)
+      .pipe(
+        
+        tap((data) => {
+          console.log(data);
+        }), // Operator von rxjs
+    
+        retry(3),
+      )
   }
   
 }
