@@ -9,6 +9,7 @@ import { Customer } from '../../model/customer';
 export class CustomerListComponent implements OnInit {
 
   public customers: Customer[] = [];
+  public errorMessage: null | string = null;
 
   constructor(private customerService: CustomerService) {}
 
@@ -17,14 +18,15 @@ export class CustomerListComponent implements OnInit {
   }
 
   loadCustomers() {
+    this.errorMessage = null;
     this.customerService
       .getAll()
       .subscribe({ // observer
         next: (customers: Customer[]) => {
           this.customers = customers;
         },
-        error: (e) => {
-          console.log(e);
+        error: (e: Error) => {
+          this.errorMessage = e.message;
         }
       });
   }

@@ -1,6 +1,13 @@
 <h2>Customer List</h2>
 <div class="d-flex justify-content-between my-4">
-    <button class="btn btn-primary">New</button>
+    <button class="btn btn-primary" routerLink="new">New</button>
     <button class="btn btn-outline-secondary" (click)="loadCustomers()">Refresh</button>
 </div>
+
+@if(errorMessage !== null) {
+    <div class="alert alert-danger">
+        {{errorMessage}}
+    </div>
+}
+
 <app-customer-table [tableData]="customers"></app-customer-table>
