@@ -9,6 +9,7 @@ import { CustomerEditComponent } from './pages/customer-edit/customer-edit.compo
 
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerTableComponent } from './components/customer-table/customer-table.component';
+import { CoreModule } from '../../core/core.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CustomerTableComponent } from './components/customer-table/customer-tab
   imports: [
     CommonModule,
     HttpClientModule,
+    CoreModule,
     CustomerRoutingModule
   ]
 })
