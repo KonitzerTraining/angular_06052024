@@ -5,11 +5,15 @@
 </div>
 
 @if(errorMessage !== null) {
-    <div class="alert alert-danger">
-        {{errorMessage}}
-    </div>
+<div class="alert alert-danger">
+    {{errorMessage}}
+</div>
 }
 
+@if (loading) {
 <app-loading-indicator></app-loading-indicator>
+}
 
-<app-customer-table [tableData]="customers"></app-customer-table>
+@if (!loading && errorMessage === null) {
+    <app-customer-table [tableData]="customers"></app-customer-table>
+}

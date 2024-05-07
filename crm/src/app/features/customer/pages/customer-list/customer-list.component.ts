@@ -10,6 +10,7 @@ export class CustomerListComponent implements OnInit {
 
   public customers: Customer[] = [];
   public errorMessage: null | string = null;
+  public loading = false;
 
   constructor(private customerService: CustomerService) {}
 
@@ -19,14 +20,18 @@ export class CustomerListComponent implements OnInit {
 
   loadCustomers() {
     this.errorMessage = null;
+    this.loading = true;
+
     this.customerService
       .getAll()
       .subscribe({ // observer
         next: (customers: Customer[]) => {
           this.customers = customers;
+          this.loading = false;
         },
         error: (e: Error) => {
           this.errorMessage = e.message;
+          this.loading = false;
         }
       });
   }
