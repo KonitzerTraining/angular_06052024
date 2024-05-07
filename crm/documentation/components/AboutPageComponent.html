@@ -155,10 +155,6 @@
 
 
 
-            <tr>
-                <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./about-page.component.scss</code></td>
-            </tr>
 
 
 
@@ -185,7 +181,6 @@
 @Component({
   selector: &#x27;app-about-page&#x27;,
   templateUrl: &#x27;./about-page.component.html&#x27;,
-  styleUrl: &#x27;./about-page.component.scss&#x27;
 })
 export class AboutPageComponent {
 
@@ -194,8 +189,14 @@ export class AboutPageComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;about-page works!&lt;/p&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;display-3&quot;&gt;
+    About
+&lt;/h1&gt;
+&lt;!-- p*3&gt;lorem --&gt;
+
+&lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, ducimus. Amet quibusdam, saepe tempore veniam dolores repudiandae, mollitia odit necessitatibus quisquam impedit qui rerum culpa non laboriosam nisi natus aliquid?&lt;/p&gt;
+&lt;p&gt;Libero est quo ducimus voluptatem explicabo modi dolorem, qui dolorum numquam sit doloremque maiores ipsa ullam facere cupiditate, amet fugit itaque minima ratione voluptatibus fuga? Aspernatur eveniet consequuntur eligendi doloremque.&lt;/p&gt;
+&lt;p&gt;Accusamus, obcaecati illo? Commodi fugiat nesciunt cupiditate temporibus voluptatem, odio sunt et voluptates nobis eaque dolorem error necessitatibus placeat iusto suscipit accusantium reiciendis? Explicabo eveniet itaque, fugit dolor laboriosam vel.&lt;/p&gt;</code></pre>
     </div>
 
 
@@ -224,8 +225,8 @@ export class AboutPageComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>about-page works!</p></div>'
-    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'StartPageComponent', 'selector': 'app-start-page'}];
+        var COMPONENT_TEMPLATE = '<div><h1 class="display-3">    About</h1><!-- p*3>lorem --><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, ducimus. Amet quibusdam, saepe tempore veniam dolores repudiandae, mollitia odit necessitatibus quisquam impedit qui rerum culpa non laboriosam nisi natus aliquid?</p><p>Libero est quo ducimus voluptatem explicabo modi dolorem, qui dolorum numquam sit doloremque maiores ipsa ullam facere cupiditate, amet fugit itaque minima ratione voluptatibus fuga? Aspernatur eveniet consequuntur eligendi doloremque.</p><p>Accusamus, obcaecati illo? Commodi fugiat nesciunt cupiditate temporibus voluptatem, odio sunt et voluptates nobis eaque dolorem error necessitatibus placeat iusto suscipit accusantium reiciendis? Explicabo eveniet itaque, fugit dolor laboriosam vel.</p></div>'
+    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CustomerEditComponent', 'selector': 'app-customer-edit'},{'name': 'CustomerIndexComponent', 'selector': 'app-customer-index'},{'name': 'CustomerListComponent', 'selector': 'app-customer-list'},{'name': 'CustomerNewComponent', 'selector': 'app-customer-new'},{'name': 'CustomerTableComponent', 'selector': 'app-customer-table'},{'name': 'DefaultPageComponent', 'selector': 'app-default-page'},{'name': 'MainNavigationComponent', 'selector': 'app-main-navigation'},{'name': 'StartPageComponent', 'selector': 'app-start-page'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AboutPageComponent'};
 </script>

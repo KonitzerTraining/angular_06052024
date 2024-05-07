@@ -19,7 +19,7 @@ export class CustomerListComponent implements OnInit {
   loadCustomers() {
     this.customerService
       .getAll()
-      .subscribe({
+      .subscribe({ // observer
         next: (customers: Customer[]) => {
           this.customers = customers;
         },

@@ -145,7 +145,8 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container my-4&quot;&gt;
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;app-main-navigation&gt;&lt;/app-main-navigation&gt;
+&lt;div class&#x3D;&quot;container my-4&quot;&gt;
 &lt;router-outlet&gt;&lt;/router-outlet&gt;
 &lt;/div&gt;
 </code></pre></td>
@@ -226,7 +227,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/app.component.ts:13</a></div>
                         </td>
                     </tr>
 
@@ -244,6 +245,7 @@
 @Component({
   selector: &#x27;app-root&#x27;,
   template: &#x60;
+    &lt;app-main-navigation&gt;&lt;/app-main-navigation&gt;
     &lt;div class&#x3D;&quot;container my-4&quot;&gt;
     &lt;router-outlet&gt;&lt;/router-outlet&gt;
     &lt;/div&gt;
@@ -282,8 +284,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container my-4"><router-outlet></router-outlet></div></div>'
-    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'StartPageComponent', 'selector': 'app-start-page'}];
+        var COMPONENT_TEMPLATE = '<div><app-main-navigation></app-main-navigation><div class="container my-4"><router-outlet></router-outlet></div></div>'
+    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CustomerEditComponent', 'selector': 'app-customer-edit'},{'name': 'CustomerIndexComponent', 'selector': 'app-customer-index'},{'name': 'CustomerListComponent', 'selector': 'app-customer-list'},{'name': 'CustomerNewComponent', 'selector': 'app-customer-new'},{'name': 'CustomerTableComponent', 'selector': 'app-customer-table'},{'name': 'DefaultPageComponent', 'selector': 'app-default-page'},{'name': 'MainNavigationComponent', 'selector': 'app-main-navigation'},{'name': 'StartPageComponent', 'selector': 'app-start-page'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

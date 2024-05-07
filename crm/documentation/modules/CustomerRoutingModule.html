@@ -77,158 +77,82 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content module">
                    <div class="content-data">
 
 
 
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Components</li>
-  <li class="breadcrumb-item"
-  >
-  StartPageComponent</li>
+    <li class="breadcrumb-item">Modules</li>
+    <li class="breadcrumb-item" >CustomerRoutingModule</li>
 </ol>
 
+
 <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-            <a href="#info" class="nav-link active"
-                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
-        </li>
-        <li class="nav-item">
-            <a href="#source" class="nav-link"
-                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li class="nav-item">
-            <a href="#templateData" class="nav-link"
-                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li class="nav-item">
-            <a href="#tree" class="nav-link"
-                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
+    <li class="nav-item">
+        <a href="#info" 
+            class="nav-link"
+            class="nav-link active"
+            role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li class="nav-item">
+        <a href="#source" 
+            class="nav-link"
+            
+            role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+    </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/features/start/start-page/start-page.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/features/customer/customer-routing.module.ts</code>
+        </p>
 
 
 
 
 
-
-<section data-compodoc="block-metadata">
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover metadata">
-        <tbody>
-
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-start-page</code></td>
-            </tr>
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./start-page.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-
-
-
-
-
-
-
-
-</div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { CustomerIndexComponent } from &#x27;./customer-index.component&#x27;;
+import { CustomerListComponent } from &#x27;./pages/customer-list/customer-list.component&#x27;;
 
-@Component({
-  selector: &#x27;app-start-page&#x27;,
-  templateUrl: &#x27;./start-page.component.html&#x27;,
+const routes: Routes &#x3D; [
+  {
+    path: &#x27;customers&#x27;,
+    component: CustomerIndexComponent,
+    children: [
+      {
+        path: &#x27;&#x27;,
+        component: CustomerListComponent
+      }
+    ]
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class StartPageComponent {
-
-}
+export class CustomerRoutingModule { }
 </code></pre>
     </div>
-
-    <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;display-3&quot;&gt;
-    Welcome!
-&lt;/h1&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed facere ipsum expedita blanditiis possimus itaque. Ad tenetur corporis dolore dicta corrupti repellendus quod dolorem animi, non laudantium magnam, ab assumenda!&lt;/p&gt;
-</code></pre>
-    </div>
-
-
-    <div class="tab-pane fade " id="tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><h1 class="display-3">    Welcome!</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed facere ipsum expedita blanditiis possimus itaque. Ad tenetur corporis dolore dicta corrupti repellendus quod dolorem animi, non laudantium magnam, ab assumenda!</p></div>'
-    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CustomerEditComponent', 'selector': 'app-customer-edit'},{'name': 'CustomerIndexComponent', 'selector': 'app-customer-index'},{'name': 'CustomerListComponent', 'selector': 'app-customer-list'},{'name': 'CustomerNewComponent', 'selector': 'app-customer-new'},{'name': 'CustomerTableComponent', 'selector': 'app-customer-table'},{'name': 'DefaultPageComponent', 'selector': 'app-default-page'},{'name': 'MainNavigationComponent', 'selector': 'app-main-navigation'},{'name': 'StartPageComponent', 'selector': 'app-start-page'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'StartPageComponent'};
-</script>
-<script src="../js/tree.js"></script>
 
 
 
@@ -271,8 +195,8 @@ export class StartPageComponent {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'StartPageComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'CustomerRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
