@@ -40,8 +40,8 @@ export class CustomerService {
     return this.http.post<Customer>(url, customer);
   }
 
-  getById(id: number | string) {
-    return this.http.get(url + id);
+  getById(id: number | string): Observable<Customer> {
+    return this.http.get<Customer>(url + id);
   }
 
   put(customer: Customer): Observable<Customer> {

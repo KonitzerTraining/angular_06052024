@@ -24,6 +24,11 @@
       "name": "test3",
       "credit": 345,
       "id": 6
+    },
+    {
+      "name": "test4",
+      "credit": 132,
+      "id": 7
     }
   ]
 }

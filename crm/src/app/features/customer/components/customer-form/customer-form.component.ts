@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Customer } from '../../model/customer';
 
 @Component({
   selector: 'app-customer-form',
   templateUrl: './customer-form.component.html'
 })
-export class CustomerFormComponent {
+export class CustomerFormComponent implements OnInit{
 
   customerForm = this.fb.group({
     name: [
@@ -27,7 +28,16 @@ export class CustomerFormComponent {
   @Output()
   customerSubmit = new EventEmitter();
 
+  @Input()
+  formData: Customer | undefined;
+
   constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    if(this.formData !== void 0) {
+      this.customerForm.patchValue(this.formData);
+    }
+  }
 
   formSubmitHandler() {
     const customer = this.customerForm.value;
